@@ -26,6 +26,7 @@ RUN ln -fs /dev/null /run/motd.dynamic
 # Copy assets
 COPY RELEASE /
 COPY assets/ /assets/
+COPY gitlab.deb /tmp/gitlab.deb
 RUN /assets/setup
 
 # Allow to access embedded tools

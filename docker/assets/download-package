@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Have the deb from another source
+[[ -e /tmp/gitlab.deb ]] && exit 0
+
 if [[ ${DOWNLOAD_URL} == *"amazonaws"* ]]; then
     echo "Downloading package from Amazon bucket - ${DOWNLOAD_URL}"
     wget --quiet ${DOWNLOAD_URL} -O /tmp/gitlab.deb
